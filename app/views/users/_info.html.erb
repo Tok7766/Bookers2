@@ -1,0 +1,19 @@
+<script src="https://kit.fontawesome.com/de7c23b24a.js" crossorigin="anonymous"></script>
+ <h1>User info</h1>
+    <%= image_tag user.get_profile_image(100,100) %>
+    <table class="table">
+     <tbody>
+      <tr>
+       <th>name</th>
+       <th><%= user.name %></th>
+      </tr>
+      <tr>
+       <th>introduction</th>
+       <th><%= user.introduction %></th>
+      </tr>
+     </tbody>
+    </table>
+    <p><%= link_to edit_user_path(user),class: 'btn btn-outline-secondary btn-block' do %>
+       <i class="fa-solid fa-user-gear"></i>
+       <% end %>
+    </p>
